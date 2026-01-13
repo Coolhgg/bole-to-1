@@ -1,0 +1,465 @@
+
+> app@0.1.0 worker
+> npx tsx src/workers/index.ts
+
+[Redis] API Client Target: redis://:***redis-16672.c8.us-east-1-2.ec2.cloud.redislabs.com:16672
+[Redis] Worker Client Target: redis://:***redis-16672.c8.us-east-1-2.ec2.cloud.redislabs.com:16672
+[Queues] Redis mode: single-node, using Worker Redis for BullMQ
+[DNS] Initializing robust DNS fallback (8.8.8.8, 1.1.1.1, 9.9.9.9)
+[Workers] Process listeners initialized
+[Workers] Starting...
+[Workers] Waiting for Redis connection...
+[Redis:API] Initializing client for redis-16672.c8.us-east-1-2.ec2.cloud.redislabs.com:16672
+[Redis:Worker] Sharing instance with API client
+[DNS] Pre-resolved api.mangadex.org to 45.129.229.1
+[DNS] Pre-resolved uploads.mangadex.org to 45.129.229.1
+[DNS] Pre-resolved cdn.mangadex.org to 172.67.161.164
+[Redis:API] Connection established
+[Redis:API] Ready (Commands enabled)
+[Workers] Redis Connection Stats: {
+  "connected_clients": 26,
+  "process_pid": 12845,
+  "api_status": "ready",
+  "worker_status": "ready"
+}
+[Workers] Initial heartbeat sent
+[Workers] Checking for stale locks...
+[Workers] Active worker session detected via healthy heartbeat
+[Workers] Acquired global lock on dedicated Redis
+[Workers] Initializing worker instances...
+[Workers] Worker instances initialized and listening
+[Scheduler] Initializing master scheduler loop...
+[Scheduler] Starting master scheduler loop on redisWorker...
+[Scheduler] Running master scheduler...
+[Scheduler] Running priority maintenance...
+[Scheduler] Maintenance complete: 0 promoted to HOT, 0 downgraded to WARM, 0 downgraded to COLD
+[Scheduler] Running Cover Refresh Scheduler...
+[Scheduler] No covers need refreshing
+[DeferredSearch] Checking for deferred queries...
+[Queues] Initializing queue: check-source
+[DeferredSearch] No deferred queries found.
+[Notification-Digest-Scheduler] Checking for eligible digests...
+[Queues] Initializing queue: notification-digest
+[Safety-Monitor] Running health checks...
+[Queues] Initializing queue: notification-delivery
+[NotificationDigest] Job process-digests-trigger started
+[Queues] Initializing queue: notification-delivery-premium
+[Safety-Monitor] Queue Depths - Free: 0, Premium: 0
+[Scheduler] Running series resolution scheduler...
+[NotificationDigest] Job process-digests-trigger completed
+[Scheduler] Found 100 series for resolution.
+[Queues] Initializing queue: series-resolution
+[Resolution] Job resolve-004638b4-a644-4ca3-a3d1-2d875be64e3b started
+[Scheduler] Queued 100 series for resolution.
+[Resolution] Job resolve-05718c68-43ea-45fb-a070-9d7a3d86e84a started
+[Scheduler] No sources due for sync.
+[Workers] Fully operational
+[Resolution] Attempting to resolve series: The World's Fastest Level Up! (ID: 004638b4-a644-4ca3-a3d1-2d875be64e3b, Attempt: 2)
+[Resolution] Attempting to resolve series: The World's Strongest S-Class Adventurer, Known as the Thunder Emperor, Shows His Power Without Restraint and Becomes a Warrior in the Magic Academy (ID: 05718c68-43ea-45fb-a070-9d7a3d86e84a, Attempt: 2)
+[Resolution] No match found for "The World's Fastest Level Up!". Incrementing retry count.
+[Resolution] Job resolve-004638b4-a644-4ca3-a3d1-2d875be64e3b completed
+[Resolution] Job resolve-6ea7488e-52bf-49d2-9b63-ff4b1e34a73a started
+[Resolution] Attempting to resolve series: After 100,000 Years of Training in a Super Difficult Dungeon, I Became the World's Strongest ~The Weakest Incompetent Gains the Upper Hand~ (ID: 6ea7488e-52bf-49d2-9b63-ff4b1e34a73a, Attempt: 2)
+[Resolution] No match found for "The World's Strongest S-Class Adventurer, Known as the Thunder Emperor, Shows His Power Without Restraint and Becomes a Warrior in the Magic Academy". Incrementing retry count.
+[Resolution] Job resolve-05718c68-43ea-45fb-a070-9d7a3d86e84a completed
+[Resolution] Job resolve-6ffe4b32-5c31-4845-9ba8-bdf4360b588f started
+[Resolution] Attempting to resolve series: Moto Sekai Ichi'i Subchara Ikusei Nikki: Hai Player, Isekai wo Kouryakuchuu! (ID: 6ffe4b32-5c31-4845-9ba8-bdf4360b588f, Attempt: 2)
+[Resolution] No match found for "After 100,000 Years of Training in a Super Difficult Dungeon, I Became the World's Strongest ~The Weakest Incompetent Gains the Upper Hand~". Incrementing retry count.
+[Resolution] Job resolve-6ea7488e-52bf-49d2-9b63-ff4b1e34a73a completed
+[Resolution] Job resolve-707565ea-114b-4333-8308-5c61a895bf1e started
+[Resolution] Attempting to resolve series: Exiled Hero Picked Up by a Demon (ID: 707565ea-114b-4333-8308-5c61a895bf1e, Attempt: 2)
+[Resolution] No match found for "Moto Sekai Ichi'i Subchara Ikusei Nikki: Hai Player, Isekai wo Kouryakuchuu!". Incrementing retry count.
+[Resolution] Job resolve-6ffe4b32-5c31-4845-9ba8-bdf4360b588f completed
+[Resolution] Job resolve-71bfd8ec-a3ba-4638-b4c1-27c2fae237bc started
+[Resolution] Attempting to resolve series: A Warrior Exiled by the Hero and His Lover (ID: 71bfd8ec-a3ba-4638-b4c1-27c2fae237bc, Attempt: 2)
+[Resolution] No match found for "Exiled Hero Picked Up by a Demon". Incrementing retry count.
+[Resolution] Job resolve-707565ea-114b-4333-8308-5c61a895bf1e completed
+[Resolution] Job resolve-7329db74-2cd9-43b2-b8fa-52875947a96f started
+[Resolution] Attempting to resolve series: The Best Noble In Another World: The Bigger My Harem Gets, The Stronger I Become (ID: 7329db74-2cd9-43b2-b8fa-52875947a96f, Attempt: 2)
+[Resolution] No match found for "A Warrior Exiled by the Hero and His Lover". Incrementing retry count.
+[Resolution] Job resolve-71bfd8ec-a3ba-4638-b4c1-27c2fae237bc completed
+[Resolution] Job resolve-7400a445-f324-46d7-ae11-e3bc631d510f started
+[Resolution] Attempting to resolve series: I Reincarnated as a Villainous Noble Who Died in the Mid Game, So I Used the Useless Skill “Tame” to Become the Strongest (ID: 7400a445-f324-46d7-ae11-e3bc631d510f, Attempt: 2)
+[Resolution] No match found for "The Best Noble In Another World: The Bigger My Harem Gets, The Stronger I Become". Incrementing retry count.
+[Resolution] Job resolve-7329db74-2cd9-43b2-b8fa-52875947a96f completed
+[Resolution] Job resolve-760417eb-4549-44ca-8779-54622605f413 started
+[Resolution] Attempting to resolve series: Outcast Adventurer's Second Chance ~Training in the Fairy World to Forge a Place to Belong~ (ID: 760417eb-4549-44ca-8779-54622605f413, Attempt: 2)
+[Resolution] No match found for "I Reincarnated as a Villainous Noble Who Died in the Mid Game, So I Used the Useless Skill “Tame” to Become the Strongest". Incrementing retry count.
+[Resolution] Job resolve-7400a445-f324-46d7-ae11-e3bc631d510f completed
+[Resolution] Job resolve-7712d18c-c177-484c-9a57-3101d041024c started
+[Resolution] Attempting to resolve series: Tsuihousareta Jougenshi no Guild Keiei (ID: 7712d18c-c177-484c-9a57-3101d041024c, Attempt: 2)
+[Resolution] No match found for "Outcast Adventurer's Second Chance ~Training in the Fairy World to Forge a Place to Belong~". Incrementing retry count.
+[Resolution] No match found for "Tsuihousareta Jougenshi no Guild Keiei". Incrementing retry count.
+[Resolution] Job resolve-760417eb-4549-44ca-8779-54622605f413 completed
+[Resolution] Job resolve-779a39a2-2318-4049-8c0d-f4b90d2b564f started
+[Resolution] Job resolve-7712d18c-c177-484c-9a57-3101d041024c completed
+[Resolution] Job resolve-793e7337-3196-45de-8630-0ba3dd1268dc started
+[Resolution] Attempting to resolve series: Yami-ochi Rasu Bosu Reijou No Osananajimi Ni Tensei Shita. Ore Ga Shindara Bad End Kakutei Na Node Saikyou Ni Natta Kedo, Mou Yami-ochi yandere-ka Shitemasen Ka? (ID: 779a39a2-2318-4049-8c0d-f4b90d2b564f, Attempt: 2)
+[Resolution] Attempting to resolve series: Is It Odd That I Became an Adventurer Even If I Graduated From the Witchcraft Institute? (ID: 793e7337-3196-45de-8630-0ba3dd1268dc, Attempt: 2)
+[Resolution] No match found for "Is It Odd That I Became an Adventurer Even If I Graduated From the Witchcraft Institute?". Incrementing retry count.
+[Resolution] Job resolve-793e7337-3196-45de-8630-0ba3dd1268dc completed
+[Resolution] Job resolve-79554e8a-7e81-41cc-8c19-133ed02ef1bd started
+[Resolution] No match found for "Yami-ochi Rasu Bosu Reijou No Osananajimi Ni Tensei Shita. Ore Ga Shindara Bad End Kakutei Na Node Saikyou Ni Natta Kedo, Mou Yami-ochi yandere-ka Shitemasen Ka?". Incrementing retry count.
+[Resolution] Attempting to resolve series: My Blade Will Lead the Way! Abandoned in a Labyrinth as a Directionally Challenged S-Rank Swordsman (ID: 79554e8a-7e81-41cc-8c19-133ed02ef1bd, Attempt: 2)
+[Resolution] Job resolve-779a39a2-2318-4049-8c0d-f4b90d2b564f completed
+[Resolution] Job resolve-7c7da07a-3ce6-495b-99fe-b776bab8971b started
+[Resolution] Attempting to resolve series: 0 Magic, a High Spirit, and a Demonic Sword (ID: 7c7da07a-3ce6-495b-99fe-b776bab8971b, Attempt: 2)
+[Resolution] No match found for "0 Magic, a High Spirit, and a Demonic Sword". Incrementing retry count.
+[Resolution] No match found for "My Blade Will Lead the Way! Abandoned in a Labyrinth as a Directionally Challenged S-Rank Swordsman". Incrementing retry count.
+[Resolution] Job resolve-7c7da07a-3ce6-495b-99fe-b776bab8971b completed
+[Resolution] Job resolve-7d088bc2-4451-48ec-927d-e999fa6f6ec1 started
+[Resolution] Job resolve-79554e8a-7e81-41cc-8c19-133ed02ef1bd completed
+[Resolution] Job resolve-7d9b605d-adb4-42c1-bdeb-ef36ab4a97e9 started
+[Resolution] Attempting to resolve series: The Strongest Heretic Plant User (ID: 7d088bc2-4451-48ec-927d-e999fa6f6ec1, Attempt: 2)
+[Resolution] Attempting to resolve series: Kikori no Isekai Tan (ID: 7d9b605d-adb4-42c1-bdeb-ef36ab4a97e9, Attempt: 2)
+[Resolution] No match found for "The Strongest Heretic Plant User". Incrementing retry count.
+[Resolution] No match found for "Kikori no Isekai Tan". Incrementing retry count.
+[Resolution] Job resolve-7d088bc2-4451-48ec-927d-e999fa6f6ec1 completed
+[Resolution] Job resolve-7d9d085f-dfe8-4b8a-9b73-1a8086c3dbe5 started
+[Resolution] Job resolve-7d9b605d-adb4-42c1-bdeb-ef36ab4a97e9 completed
+[Resolution] Job resolve-7e5e9ee8-e4bc-4c6c-8ec2-eb7f40513db3 started
+[Resolution] Attempting to resolve series: The Strongest Female Masters, Who Are Trying to Raise Me Up, Are in Shambles Over Their Training Policy (ID: 7d9d085f-dfe8-4b8a-9b73-1a8086c3dbe5, Attempt: 2)
+[Resolution] Attempting to resolve series: The Exiled Reincarnated Heavy Knight Is Unrivaled in Game Knowledge (ID: 7e5e9ee8-e4bc-4c6c-8ec2-eb7f40513db3, Attempt: 2)
+[Queues] Initializing queue: sync-source
+[Queues] Initializing queue: chapter-ingest
+[Workers] Heartbeat sent
+[Resolution] No match found for "The Exiled Reincarnated Heavy Knight Is Unrivaled in Game Knowledge". Incrementing retry count.
+[Resolution] No match found for "The Strongest Female Masters, Who Are Trying to Raise Me Up, Are in Shambles Over Their Training Policy". Incrementing retry count.
+[Resolution] Job resolve-7e5e9ee8-e4bc-4c6c-8ec2-eb7f40513db3 completed
+[Resolution] Job resolve-804eeceb-2a33-43bb-9d15-dc756710bc7e started
+[Resolution] Job resolve-7d9d085f-dfe8-4b8a-9b73-1a8086c3dbe5 completed
+[Resolution] Job resolve-81c24fec-068d-457b-b9c2-5ac74f54c684 started
+[Resolution] Attempting to resolve series: I Was Banished for Being a Useless Tamer, but My Second Job as a Universal Fusionist Lets Me Build the Ultimate Party (ID: 804eeceb-2a33-43bb-9d15-dc756710bc7e, Attempt: 2)
+[Resolution] Attempting to resolve series: Level 0 no Maou-sama, Isekai de Boukensha wo Hajimemasu (ID: 81c24fec-068d-457b-b9c2-5ac74f54c684, Attempt: 2)
+[Resolution] No match found for "Level 0 no Maou-sama, Isekai de Boukensha wo Hajimemasu". Incrementing retry count.
+[Resolution] Job resolve-81c24fec-068d-457b-b9c2-5ac74f54c684 completed
+[Resolution] Job resolve-82f3652d-0c6c-475b-8dd2-0227b0631193 started
+[Resolution] No match found for "I Was Banished for Being a Useless Tamer, but My Second Job as a Universal Fusionist Lets Me Build the Ultimate Party". Incrementing retry count.
+[Resolution] Attempting to resolve series: Josho Mao No Yarinaoshi Ore Ha Mada Ichi Wari Mo Honki Wo Dashiteinai Ndaga (ID: 82f3652d-0c6c-475b-8dd2-0227b0631193, Attempt: 2)
+[Resolution] Job resolve-804eeceb-2a33-43bb-9d15-dc756710bc7e completed
+[Resolution] Job resolve-83339e7f-706d-48ce-951e-67fb0649e2e2 started
+[Resolution] Attempting to resolve series: The Otherworldly Life of the Missing Alchemist~ (ID: 83339e7f-706d-48ce-951e-67fb0649e2e2, Attempt: 2)
+[Resolution] No match found for "Josho Mao No Yarinaoshi Ore Ha Mada Ichi Wari Mo Honki Wo Dashiteinai Ndaga". Incrementing retry count.
+[Resolution] Job resolve-82f3652d-0c6c-475b-8dd2-0227b0631193 completed
+[Resolution] Job resolve-837a290b-7be4-48ac-801b-75d7032075c8 started
+[Resolution] No match found for "The Otherworldly Life of the Missing Alchemist~". Incrementing retry count.
+[Resolution] Attempting to resolve series: Magician of the Abyss – I Was Imprisoned as a Traitor, but I Obtained an Immortal Body and the Strongest Power to Rise as an Adventurer (ID: 837a290b-7be4-48ac-801b-75d7032075c8, Attempt: 2)
+[Resolution] Job resolve-83339e7f-706d-48ce-951e-67fb0649e2e2 completed
+[Resolution] Job resolve-848d8340-4bd5-418b-b236-a070bee53638 started
+[Resolution] Attempting to resolve series: The Banished Noble Uses the Trash Skill Ancient Summoning to Summon Heroes and Bring Life to the Borderlands ~When I Summoned the Heroes, They Adored Me, so They Made My Territory the Strongest~ (ID: 848d8340-4bd5-418b-b236-a070bee53638, Attempt: 2)
+[Resolution] No match found for "Magician of the Abyss – I Was Imprisoned as a Traitor, but I Obtained an Immortal Body and the Strongest Power to Rise as an Adventurer". Incrementing retry count.
+[Resolution] Job resolve-837a290b-7be4-48ac-801b-75d7032075c8 completed
+[Resolution] Job resolve-8518550b-44dc-4742-a32b-1e88eb438d68 started
+[Resolution] Attempting to resolve series: I've Become a Rogue Lord in a World Where Only I Can Level Up (ID: 8518550b-44dc-4742-a32b-1e88eb438d68, Attempt: 2)
+[Resolution] No match found for "The Banished Noble Uses the Trash Skill Ancient Summoning to Summon Heroes and Bring Life to the Borderlands ~When I Summoned the Heroes, They Adored Me, so They Made My Territory the Strongest~". Incrementing retry count.
+[Resolution] No match found for "I've Become a Rogue Lord in a World Where Only I Can Level Up". Incrementing retry count.
+[Resolution] Job resolve-848d8340-4bd5-418b-b236-a070bee53638 completed
+[Resolution] Job resolve-8a2c8e4c-136c-4540-852a-725b7c43f4e9 started
+[Resolution] Job resolve-8518550b-44dc-4742-a32b-1e88eb438d68 completed
+[Resolution] Job resolve-8aed9e0f-b96c-4003-b313-fb58bac6fcd5 started
+[Resolution] Attempting to resolve series: The Black Pig Prince Recalls His Previous Life and Becomes the Strongest (ID: 8a2c8e4c-136c-4540-852a-725b7c43f4e9, Attempt: 2)
+[Resolution] Attempting to resolve series: The Protagonist, An Exclusive Magic User, Wants To Lead A Slow Life In A Remote Town After Severing Ties With His Childhood Friend, An Alchemist, Who Harassed Him About The Low Collection Rate Of Materials That No One Else But Him Could Collect (ID: 8aed9e0f-b96c-4003-b313-fb58bac6fcd5, Attempt: 2)
+[Resolution] No match found for "The Black Pig Prince Recalls His Previous Life and Becomes the Strongest". Incrementing retry count.
+[Resolution] Job resolve-8a2c8e4c-136c-4540-852a-725b7c43f4e9 completed
+[Resolution] Job resolve-8b94c23b-09d2-467e-8e9d-12f5aa0e1ba1 started
+[Resolution] Attempting to resolve series: Solo Bug Player (ID: 8b94c23b-09d2-467e-8e9d-12f5aa0e1ba1, Attempt: 2)
+[Resolution] No match found for "Solo Bug Player". Incrementing retry count.
+[Resolution] Job resolve-8b94c23b-09d2-467e-8e9d-12f5aa0e1ba1 completed
+[Resolution] Job resolve-8e4c0672-3183-4bc5-9af9-97552bc2508e started
+[Resolution] No match found for "The Protagonist, An Exclusive Magic User, Wants To Lead A Slow Life In A Remote Town After Severing Ties With His Childhood Friend, An Alchemist, Who Harassed Him About The Low Collection Rate Of Materials That No One Else But Him Could Collect". Incrementing retry count.
+[Resolution] Attempting to resolve series: Teisou Gyakuten Sekai no Doutei Henkyou Ryoushu Kishi (ID: 8e4c0672-3183-4bc5-9af9-97552bc2508e, Attempt: 2)
+[Resolution] Job resolve-8aed9e0f-b96c-4003-b313-fb58bac6fcd5 completed
+[Resolution] Job resolve-8e711bbe-8e4b-45ae-9510-13e102dfd345 started
+[Resolution] Attempting to resolve series: Lazy Dungeon Master (ID: 8e711bbe-8e4b-45ae-9510-13e102dfd345, Attempt: 2)
+[Resolution] No match found for "Teisou Gyakuten Sekai no Doutei Henkyou Ryoushu Kishi". Incrementing retry count.
+[Resolution] No match found for "Lazy Dungeon Master". Incrementing retry count.
+[Resolution] Job resolve-8e4c0672-3183-4bc5-9af9-97552bc2508e completed
+[Resolution] Job resolve-92728482-ff9c-4a4b-961d-58e234bff41e started
+[Resolution] Job resolve-8e711bbe-8e4b-45ae-9510-13e102dfd345 completed
+[Resolution] Job resolve-96645d85-3006-45af-b676-618d110daaad started
+[Resolution] Attempting to resolve series: The Lazy Aristocrat (ID: 92728482-ff9c-4a4b-961d-58e234bff41e, Attempt: 2)
+[Resolution] Attempting to resolve series: The Reincarnated Dimensional Mage Wants to Stand Out While Keeping His Identity Hidden (ID: 96645d85-3006-45af-b676-618d110daaad, Attempt: 2)
+[Resolution] No match found for "The Lazy Aristocrat". Incrementing retry count.
+[Resolution] Job resolve-92728482-ff9c-4a4b-961d-58e234bff41e completed
+[Resolution] Job resolve-9776ba7b-d630-4305-b6c0-794a18f70337 started
+[Resolution] Attempting to resolve series: Did You Think You Could Live Normally Even in a World With a 1:5 Male-To-Female Ratio? (ID: 9776ba7b-d630-4305-b6c0-794a18f70337, Attempt: 2)
+[Resolution] No match found for "The Reincarnated Dimensional Mage Wants to Stand Out While Keeping His Identity Hidden". Incrementing retry count.
+[Resolution] Job resolve-96645d85-3006-45af-b676-618d110daaad completed
+[Resolution] Job resolve-9ae97b39-40a5-44bd-a1fe-06ed1b760c47 started
+[Resolution] Attempting to resolve series: My Noble Family Is Headed for Ruin, so I May as Well Study Magic in My Free Time (ID: 9ae97b39-40a5-44bd-a1fe-06ed1b760c47, Attempt: 2)
+[Resolution] No match found for "Did You Think You Could Live Normally Even in a World With a 1:5 Male-To-Female Ratio?". Incrementing retry count.
+[Resolution] Job resolve-9776ba7b-d630-4305-b6c0-794a18f70337 completed
+[Resolution] Job resolve-9b5fb466-d084-4148-8263-a26aef8b8a29 started
+[Resolution] Attempting to resolve series: Ochikobore kuni o deru ~ jitsuwa sekai de 4 hitome no fuyo-jutsu-shidatta kudan ni tsuite ~ (ID: 9b5fb466-d084-4148-8263-a26aef8b8a29, Attempt: 2)
+[Resolution] No match found for "My Noble Family Is Headed for Ruin, so I May as Well Study Magic in My Free Time". Incrementing retry count.
+[Resolution] Job resolve-9ae97b39-40a5-44bd-a1fe-06ed1b760c47 completed
+[Resolution] Job resolve-9e13a6fe-1cbc-4545-a5fd-19e4f796efc5 started
+[Resolution] Attempting to resolve series: The Strange Dragon and the Former Choreman of the Heroes Party, Relaxing Slow Life on the New Continent (ID: 9e13a6fe-1cbc-4545-a5fd-19e4f796efc5, Attempt: 2)
+[Resolution] No match found for "Ochikobore kuni o deru ~ jitsuwa sekai de 4 hitome no fuyo-jutsu-shidatta kudan ni tsuite ~". Incrementing retry count.
+[Resolution] Job resolve-9b5fb466-d084-4148-8263-a26aef8b8a29 completed
+[Resolution] Job resolve-9fb7ae15-8d0e-4add-b45f-006271856797 started
+[Resolution] Attempting to resolve series: The Capital’s One-Man Army Golem Master—Unexpectedly Banished!? ~Now That I’m Free, I’ll Create the Ultimate Golem Together With My Beautiful Hero Disciples. I Don’t Care Even if They Beg Me to Come Back~ (ID: 9fb7ae15-8d0e-4add-b45f-006271856797, Attempt: 2)
+[Workers] Heartbeat sent
+[Resolution] No match found for "The Strange Dragon and the Former Choreman of the Heroes Party, Relaxing Slow Life on the New Continent". Incrementing retry count.
+[Resolution] Job resolve-9e13a6fe-1cbc-4545-a5fd-19e4f796efc5 completed
+[Resolution] Job resolve-a0d4073c-1194-4313-8d4a-e7afcfbacf7b started
+[Resolution] Attempting to resolve series: The Genesis Sorcerer Who Was Deliberately Banished Rules Over Another World (ID: a0d4073c-1194-4313-8d4a-e7afcfbacf7b, Attempt: 2)
+[Resolution] No match found for "The Genesis Sorcerer Who Was Deliberately Banished Rules Over Another World". Incrementing retry count.
+[Resolution] No match found for "The Capital’s One-Man Army Golem Master—Unexpectedly Banished!? ~Now That I’m Free, I’ll Create the Ultimate Golem Together With My Beautiful Hero Disciples. I Don’t Care Even if They Beg Me to Come Back~". Incrementing retry count.
+[Resolution] Job resolve-a0d4073c-1194-4313-8d4a-e7afcfbacf7b completed
+[Resolution] Job resolve-a24e8672-be61-4b65-b9aa-db286d4a72de started
+[Resolution] Job resolve-9fb7ae15-8d0e-4add-b45f-006271856797 completed
+[Resolution] Job resolve-a27140f6-0c1e-4eb4-9400-a52395d41589 started
+[Resolution] Attempting to resolve series: Aiming to Conquer the Demon King’s Castle with Merchant Skills ～Since I Have Been Transported to Another World, I Decided to Survive with the Strongest Items and Talk Techniques ～ (ID: a24e8672-be61-4b65-b9aa-db286d4a72de, Attempt: 2)
+[Resolution] Attempting to resolve series: A Skeleton Who Was The Brave (ID: a27140f6-0c1e-4eb4-9400-a52395d41589, Attempt: 2)
+[Resolution] No match found for "A Skeleton Who Was The Brave". Incrementing retry count.
+[Resolution] Job resolve-a27140f6-0c1e-4eb4-9400-a52395d41589 completed
+[Resolution] Job resolve-a36f1e9f-8582-4a1f-b0e4-a5e63a02327c started
+[Resolution] Attempting to resolve series: That Time I Got Reincarnated With Talent ~I’ll Work Hard Even if I Go to Another World~ (ID: a36f1e9f-8582-4a1f-b0e4-a5e63a02327c, Attempt: 2)
+[Resolution] No match found for "Aiming to Conquer the Demon King’s Castle with Merchant Skills ～Since I Have Been Transported to Another World, I Decided to Survive with the Strongest Items and Talk Techniques ～". Incrementing retry count.
+[Resolution] Job resolve-a24e8672-be61-4b65-b9aa-db286d4a72de completed
+[Resolution] Job resolve-a5ac690c-66f2-4643-8113-e89aab86ded2 started
+[Resolution] No match found for "That Time I Got Reincarnated With Talent ~I’ll Work Hard Even if I Go to Another World~". Incrementing retry count.
+[Resolution] Attempting to resolve series: Kiyoubinbou, Jou wo Tateru - Kaitaku Gakuen no Rettousei na no ni, Joukyuu-shoku no Skill to Mahou ga Subete Tsukaemasu @COMIC (ID: a5ac690c-66f2-4643-8113-e89aab86ded2, Attempt: 2)
+[Resolution] Job resolve-a36f1e9f-8582-4a1f-b0e4-a5e63a02327c completed
+[Resolution] Job resolve-a62c2ddf-81a6-4ddb-8b21-2a616890aae2 started
+[Resolution] Attempting to resolve series: The Reincarnated Noble Who Was Exiled, Uses a Useless Skill to Rule Over Domestic Affairs~ Was Supposed to Run the Territory Freely, but Thanks to the Skill Gacha, Ended Up Creating the Strongest Territory~ (ID: a62c2ddf-81a6-4ddb-8b21-2a616890aae2, Attempt: 2)
+[Resolution] No match found for "Kiyoubinbou, Jou wo Tateru - Kaitaku Gakuen no Rettousei na no ni, Joukyuu-shoku no Skill to Mahou ga Subete Tsukaemasu @COMIC". Incrementing retry count.
+[Resolution] Job resolve-a5ac690c-66f2-4643-8113-e89aab86ded2 completed
+[Resolution] Job resolve-a7785433-b6ce-4a1e-90c6-e2db97346d8a started
+[Resolution] Attempting to resolve series: Kyuuseishu ≪MESHIA≫~Isekai wo sukutta moto yuusha ga mamono no afureru genjitsu sekai wo musou suru~ (ID: a7785433-b6ce-4a1e-90c6-e2db97346d8a, Attempt: 2)
+[Resolution] No match found for "The Reincarnated Noble Who Was Exiled, Uses a Useless Skill to Rule Over Domestic Affairs~ Was Supposed to Run the Territory Freely, but Thanks to the Skill Gacha, Ended Up Creating the Strongest Territory~". Incrementing retry count.
+[Resolution] Job resolve-a62c2ddf-81a6-4ddb-8b21-2a616890aae2 completed
+[Resolution] Job resolve-a8bd66db-054f-4fcc-b7d8-bd0b106dfcfd started
+[Resolution] No match found for "Kyuuseishu ≪MESHIA≫~Isekai wo sukutta moto yuusha ga mamono no afureru genjitsu sekai wo musou suru~". Incrementing retry count.
+[Resolution] Attempting to resolve series: The Strongest Sage Without a Job - I Couldn't Get a Job and Was Exiled, but With the Knowledge of the Game, I Was the Strongest in the Other World (ID: a8bd66db-054f-4fcc-b7d8-bd0b106dfcfd, Attempt: 2)
+[Resolution] Job resolve-a7785433-b6ce-4a1e-90c6-e2db97346d8a completed
+[Resolution] Job resolve-aaa38465-2415-4ed3-8a9d-23051052326e started
+[Resolution] Attempting to resolve series: Time Prison: A Spirit Armament Wielder Who Returns by Death, Uses His [Copy] Ability to Become the Strongest (ID: aaa38465-2415-4ed3-8a9d-23051052326e, Attempt: 2)
+[Resolution] No match found for "Time Prison: A Spirit Armament Wielder Who Returns by Death, Uses His [Copy] Ability to Become the Strongest". Incrementing retry count.
+[Resolution] No match found for "The Strongest Sage Without a Job - I Couldn't Get a Job and Was Exiled, but With the Knowledge of the Game, I Was the Strongest in the Other World". Incrementing retry count.
+[Resolution] Job resolve-aaa38465-2415-4ed3-8a9d-23051052326e completed
+[Resolution] Job resolve-b0ffdb98-ea06-41b7-b1cb-2f037713aefe started
+[Resolution] Job resolve-a8bd66db-054f-4fcc-b7d8-bd0b106dfcfd completed
+[Resolution] Job resolve-b1226571-c499-4e48-81e6-ad171357dd7f started
+[Resolution] Attempting to resolve series: Saikyou de Saisoku no Mugen Level Up (ID: b0ffdb98-ea06-41b7-b1cb-2f037713aefe, Attempt: 2)
+[Resolution] Attempting to resolve series: My Female Sword Master, Who I Live With, Is So Cute That I’m Happy Every Day (ID: b1226571-c499-4e48-81e6-ad171357dd7f, Attempt: 2)
+[Resolution] No match found for "Saikyou de Saisoku no Mugen Level Up". Incrementing retry count.
+[Resolution] Job resolve-b0ffdb98-ea06-41b7-b1cb-2f037713aefe completed
+[Resolution] Job resolve-b2975229-a9b8-4bea-a65a-0a19b8ba9770 started
+[Resolution] No match found for "My Female Sword Master, Who I Live With, Is So Cute That I’m Happy Every Day". Incrementing retry count.
+[Resolution] Job resolve-b1226571-c499-4e48-81e6-ad171357dd7f completed
+[Resolution] Job resolve-b2eafe59-f123-4436-9751-2874a987632d started
+[Resolution] Attempting to resolve series: My Trash Skill 'Appraisal' Awakened into 'Inheritance' — Now I Wield the Power of Heroes and Stand Unmatched! (ID: b2975229-a9b8-4bea-a65a-0a19b8ba9770, Attempt: 2)
+[Resolution] Attempting to resolve series: Dungeon Busters (ID: b2eafe59-f123-4436-9751-2874a987632d, Attempt: 2)
+[Resolution] No match found for "Dungeon Busters". Incrementing retry count.
+[Resolution] Job resolve-b2eafe59-f123-4436-9751-2874a987632d completed
+[Resolution] Job resolve-b3a4b008-5085-4db7-b322-7da3bf378645 started
+[Resolution] Attempting to resolve series: Isekai Gourmet de Nariagari Musou ~Yama ni Tsuihou Sareta node, Nonbiri Camp wo Tanoshindeitara Itsunomanika Tsuyoku Natteite, Oukou Kizoku ya Jitsuryokusha-tachi ga Ore wo Houtte Oite Kuremasen. Ippou, Ore wo Tsuihou Shita Kizoku-tachi wa Hametsu ga Hajimaru~ (ID: b3a4b008-5085-4db7-b322-7da3bf378645, Attempt: 2)
+[Resolution] No match found for "My Trash Skill 'Appraisal' Awakened into 'Inheritance' — Now I Wield the Power of Heroes and Stand Unmatched!". Incrementing retry count.
+[Resolution] Job resolve-b2975229-a9b8-4bea-a65a-0a19b8ba9770 completed
+[Resolution] Job resolve-b567e3fc-f35c-4ff0-a913-a799360640ab started
+[Resolution] Attempting to resolve series: Everyone in My Solo Party ~ Summon Us From Another World and Be Unmatch (ID: b567e3fc-f35c-4ff0-a913-a799360640ab, Attempt: 2)
+[Resolution] No match found for "Everyone in My Solo Party ~ Summon Us From Another World and Be Unmatch". Incrementing retry count.
+[Resolution] Job resolve-b567e3fc-f35c-4ff0-a913-a799360640ab completed
+[Resolution] Job resolve-b5be06c4-24f8-40ef-8eff-d3865056d083 started
+[Resolution] Attempting to resolve series: Ars Goetia ～The Boy Who Was Called Incompetent Uses 72 Demons to Become Unstoppable (ID: b5be06c4-24f8-40ef-8eff-d3865056d083, Attempt: 2)
+[Resolution] No match found for "Isekai Gourmet de Nariagari Musou ~Yama ni Tsuihou Sareta node, Nonbiri Camp wo Tanoshindeitara Itsunomanika Tsuyoku Natteite, Oukou Kizoku ya Jitsuryokusha-tachi ga Ore wo Houtte Oite Kuremasen. Ippou, Ore wo Tsuihou Shita Kizoku-tachi wa Hametsu ga Hajimaru~". Incrementing retry count.
+[Resolution] Job resolve-b3a4b008-5085-4db7-b322-7da3bf378645 completed
+[Resolution] Job resolve-b84c430e-045c-438a-8a41-a9f04ebdbd73 started
+[Workers] Heartbeat sent
+[Resolution] No match found for "Ars Goetia ～The Boy Who Was Called Incompetent Uses 72 Demons to Become Unstoppable". Incrementing retry count.
+[Resolution] Attempting to resolve series: Kanchigai no Atelier Meister (ID: b84c430e-045c-438a-8a41-a9f04ebdbd73, Attempt: 2)
+[Resolution] Job resolve-b5be06c4-24f8-40ef-8eff-d3865056d083 completed
+[Resolution] Job resolve-b939ea0f-2731-415a-954f-3126b8403089 started
+[Resolution] Attempting to resolve series: Mou.... Hatarakitakunaindesu Boukensha Nanka Yamete yaru. Imasara, Taiguu wo Kaerukara to Onegai sarete mo Okotowaridesu. Boku wa Zettai Hatarakimasen. (ID: b939ea0f-2731-415a-954f-3126b8403089, Attempt: 2)
+[Resolution] No match found for "Kanchigai no Atelier Meister". Incrementing retry count.
+[Resolution] Job resolve-b84c430e-045c-438a-8a41-a9f04ebdbd73 completed
+[Resolution] Job resolve-bae47b1b-fcda-40a4-a85f-5fd2062642f9 started
+[Resolution] Attempting to resolve series: Kabe-yaku nado fuyo to tsuiho sa reta S-kyu boken-sha, (dorei kaiho) sukiru o kushi shite shijo saikyo no kuni-dzukuri (ID: bae47b1b-fcda-40a4-a85f-5fd2062642f9, Attempt: 2)
+[Resolution] No match found for "Mou.... Hatarakitakunaindesu Boukensha Nanka Yamete yaru. Imasara, Taiguu wo Kaerukara to Onegai sarete mo Okotowaridesu. Boku wa Zettai Hatarakimasen.". Incrementing retry count.
+[Resolution] Job resolve-b939ea0f-2731-415a-954f-3126b8403089 completed
+[Resolution] Job resolve-bd39a738-5b0d-47d9-9a70-330fa2b71b1e started
+[Resolution] No match found for "Kabe-yaku nado fuyo to tsuiho sa reta S-kyu boken-sha, (dorei kaiho) sukiru o kushi shite shijo saikyo no kuni-dzukuri". Incrementing retry count.
+[Resolution] Attempting to resolve series: I Was Dismissed from the Hero’s Party Because They Don't Need My Training Skills, so I Strengthened My [Fief] Which I Got as a Replacement for My Retirement Money (ID: bd39a738-5b0d-47d9-9a70-330fa2b71b1e, Attempt: 2)
+[Resolution] Job resolve-bae47b1b-fcda-40a4-a85f-5fd2062642f9 completed
+[Resolution] Job resolve-bd694364-b9eb-4b66-9c2d-bf33acae45e3 started
+[Resolution] Attempting to resolve series: Sayounara Ryuusei, Konnichiwa Jinsei (ID: bd694364-b9eb-4b66-9c2d-bf33acae45e3, Attempt: 2)
+[Resolution] No match found for "Sayounara Ryuusei, Konnichiwa Jinsei". Incrementing retry count.
+[Resolution] Job resolve-bd694364-b9eb-4b66-9c2d-bf33acae45e3 completed
+[Resolution] Job resolve-c60d3067-ffdc-4e25-b4c8-6467895fbca5 started
+[Resolution] Attempting to resolve series: An Exiled Blacksmith Uses His Cheat Skills to Forge Legends (ID: c60d3067-ffdc-4e25-b4c8-6467895fbca5, Attempt: 2)
+[Resolution] No match found for "I Was Dismissed from the Hero’s Party Because They Don't Need My Training Skills, so I Strengthened My [Fief] Which I Got as a Replacement for My Retirement Money". Incrementing retry count.
+[Resolution] Job resolve-bd39a738-5b0d-47d9-9a70-330fa2b71b1e completed
+[Resolution] Job resolve-c8fc34f6-f1af-4130-b789-5814d53c1808 started
+[Resolution] Attempting to resolve series: Kamisama ni Kago 2 Nin Bun Moraimashita (ID: c8fc34f6-f1af-4130-b789-5814d53c1808, Attempt: 2)
+[Resolution] No match found for "An Exiled Blacksmith Uses His Cheat Skills to Forge Legends". Incrementing retry count.
+[Resolution] Job resolve-c60d3067-ffdc-4e25-b4c8-6467895fbca5 completed
+[Resolution] Job resolve-c920fea8-d7b9-495e-a322-ad69cab9d4ae started
+[Resolution] No match found for "Kamisama ni Kago 2 Nin Bun Moraimashita". Incrementing retry count.
+[Resolution] Attempting to resolve series: Sasensareta Munou Ouji wa Jitsuryoku wo Kakushitai (ID: c920fea8-d7b9-495e-a322-ad69cab9d4ae, Attempt: 2)
+[Resolution] Job resolve-c8fc34f6-f1af-4130-b789-5814d53c1808 completed
+[Resolution] Job resolve-c9fe6023-8d9b-4065-a0c1-e9a8b6e28729 started
+[Resolution] Attempting to resolve series: Born with the Weakest Job, I Worked My Hardest to Become the Strongest Tamer with the Weakest Skill: Fist Punch! (ID: c9fe6023-8d9b-4065-a0c1-e9a8b6e28729, Attempt: 2)
+[Resolution] No match found for "Sasensareta Munou Ouji wa Jitsuryoku wo Kakushitai". Incrementing retry count.
+[Resolution] Job resolve-c920fea8-d7b9-495e-a322-ad69cab9d4ae completed
+[Resolution] Job resolve-cd767a57-c3a8-488f-93b0-2078130f2143 started
+[Resolution] Attempting to resolve series: Hazure Skill Nigeru de Ore wa Kyokugen-tei Level no Mama Saikyou wo Mezasu (ID: cd767a57-c3a8-488f-93b0-2078130f2143, Attempt: 2)
+[Resolution] No match found for "Born with the Weakest Job, I Worked My Hardest to Become the Strongest Tamer with the Weakest Skill: Fist Punch!". Incrementing retry count.
+[Resolution] Job resolve-c9fe6023-8d9b-4065-a0c1-e9a8b6e28729 completed
+[Resolution] Job resolve-cda947a3-c936-411c-9342-a4865a969fd6 started
+[Resolution] No match found for "Hazure Skill Nigeru de Ore wa Kyokugen-tei Level no Mama Saikyou wo Mezasu". Incrementing retry count.
+[Resolution] Attempting to resolve series: Kouryakubon wo Kushi Suru Saikyou no Mahoutsukai (ID: cda947a3-c936-411c-9342-a4865a969fd6, Attempt: 2)
+[Resolution] Job resolve-cd767a57-c3a8-488f-93b0-2078130f2143 completed
+[Resolution] Job resolve-d13297cb-b932-4bbb-bb2b-d2a3d1207fc6 started
+[Resolution] Attempting to resolve series: Respawn: Usurping the Imperial Throne with my Extra Lives (ID: d13297cb-b932-4bbb-bb2b-d2a3d1207fc6, Attempt: 2)
+[Resolution] No match found for "Kouryakubon wo Kushi Suru Saikyou no Mahoutsukai". Incrementing retry count.
+[Resolution] Job resolve-cda947a3-c936-411c-9342-a4865a969fd6 completed
+[Resolution] Job resolve-d1f5d49c-9e9b-4d24-ada4-4611d019dcfe started
+[Resolution] Attempting to resolve series: That Is Needed for a Villainous Aristocrat (ID: d1f5d49c-9e9b-4d24-ada4-4611d019dcfe, Attempt: 2)
+[Resolution] No match found for "Respawn: Usurping the Imperial Throne with my Extra Lives". Incrementing retry count.
+[Resolution] Job resolve-d13297cb-b932-4bbb-bb2b-d2a3d1207fc6 completed
+[Resolution] Job resolve-d231d726-3793-41d0-aac1-592d0041ae74 started
+[Resolution] Attempting to resolve series: Seija Musou: Salaryman, Isekai de Ikinokoru Tame ni Ayumu Michi (ID: d231d726-3793-41d0-aac1-592d0041ae74, Attempt: 2)
+[Resolution] No match found for "That Is Needed for a Villainous Aristocrat". Incrementing retry count.
+[Resolution] Job resolve-d1f5d49c-9e9b-4d24-ada4-4611d019dcfe completed
+[Resolution] Job resolve-d2c3044b-a693-4229-9480-6d8fdca203e3 started
+[Resolution] Attempting to resolve series: Noble Reincarnation ~Born Blessed, So I’ll Obtain Ultimate Power~ (ID: d2c3044b-a693-4229-9480-6d8fdca203e3, Attempt: 2)
+[Resolution] No match found for "Seija Musou: Salaryman, Isekai de Ikinokoru Tame ni Ayumu Michi". Incrementing retry count.
+[Resolution] Job resolve-d231d726-3793-41d0-aac1-592d0041ae74 completed
+[Resolution] Job resolve-d4376e25-1f1e-46cb-ae59-af70c5f99a0a started
+[Resolution] Attempting to resolve series: Henkyou no Yakushi, Miyako de S Rank Boukensha to naru (ID: d4376e25-1f1e-46cb-ae59-af70c5f99a0a, Attempt: 2)
+[Resolution] No match found for "Noble Reincarnation ~Born Blessed, So I’ll Obtain Ultimate Power~". Incrementing retry count.
+[Resolution] Job resolve-d2c3044b-a693-4229-9480-6d8fdca203e3 completed
+[Resolution] Job resolve-d48e3afc-e66a-4d4c-bb1e-0e677b4db76d started
+[Resolution] Attempting to resolve series: The Akashic Record Which Only I Can Read (ID: d48e3afc-e66a-4d4c-bb1e-0e677b4db76d, Attempt: 2)
+[Resolution] No match found for "Henkyou no Yakushi, Miyako de S Rank Boukensha to naru". Incrementing retry count.
+[Resolution] Job resolve-d4376e25-1f1e-46cb-ae59-af70c5f99a0a completed
+[Resolution] Job resolve-d5119a4c-8994-4139-925a-24da5807418e started
+[Resolution] No match found for "The Akashic Record Which Only I Can Read". Incrementing retry count.
+[Resolution] Attempting to resolve series: The Strongest Villain, Who Had Hidden Himself Deep in the Mountains to Escape His Downfall, Is Dragged Back Into the Spotlight by the Heroine He Once Saved. (ID: d5119a4c-8994-4139-925a-24da5807418e, Attempt: 2)
+[Resolution] Job resolve-d48e3afc-e66a-4d4c-bb1e-0e677b4db76d completed
+[Resolution] Job resolve-d5978fde-ec0b-4c12-ae5c-3c30bf950646 started
+[Resolution] Attempting to resolve series: Marchioness Emilia's Butler Jack Is Deep in Debt (ID: d5978fde-ec0b-4c12-ae5c-3c30bf950646, Attempt: 2)
+[Resolution] No match found for "Marchioness Emilia's Butler Jack Is Deep in Debt". Incrementing retry count.
+[Resolution] Job resolve-d5978fde-ec0b-4c12-ae5c-3c30bf950646 completed
+[Resolution] Job resolve-d82a7de0-1eff-46f7-b064-f54ceeb3bc88 started
+[Resolution] No match found for "The Strongest Villain, Who Had Hidden Himself Deep in the Mountains to Escape His Downfall, Is Dragged Back Into the Spotlight by the Heroine He Once Saved.". Incrementing retry count.
+[Resolution] Attempting to resolve series: Cast-off Magic Tool Researcher is Actually an S-rank Mage (ID: d82a7de0-1eff-46f7-b064-f54ceeb3bc88, Attempt: 2)
+[Resolution] Job resolve-d5119a4c-8994-4139-925a-24da5807418e completed
+[Resolution] Job resolve-d939f5cd-87c0-41f8-b4d2-3cd9e777f266 started
+[Resolution] Attempting to resolve series: Kizokuka Sannan no Nariagari Life (ID: d939f5cd-87c0-41f8-b4d2-3cd9e777f266, Attempt: 2)
+[Resolution] No match found for "Cast-off Magic Tool Researcher is Actually an S-rank Mage". Incrementing retry count.
+[Resolution] Job resolve-d82a7de0-1eff-46f7-b064-f54ceeb3bc88 completed
+[Resolution] Job resolve-da4d2ade-35bf-4d9e-a04e-49b0ff5a3a63 started
+[Resolution] No match found for "Kizokuka Sannan no Nariagari Life". Incrementing retry count.
+[Workers] Heartbeat sent
+[Resolution] Job resolve-d939f5cd-87c0-41f8-b4d2-3cd9e777f266 completed
+[Resolution] Job resolve-dd375d84-72e1-456b-8266-71c3df4cb91c started
+[Resolution] Attempting to resolve series: Ken to Mahou to Gakureki Shakai (ID: da4d2ade-35bf-4d9e-a04e-49b0ff5a3a63, Attempt: 2)
+[Resolution] Attempting to resolve series: Ore no Kantei Skill ga Cheat Sugite (ID: dd375d84-72e1-456b-8266-71c3df4cb91c, Attempt: 2)
+[Resolution] No match found for "Ken to Mahou to Gakureki Shakai". Incrementing retry count.
+[Resolution] Job resolve-da4d2ade-35bf-4d9e-a04e-49b0ff5a3a63 completed
+[Resolution] Job resolve-ddbcc352-e0a5-4d3e-838b-9de7b1184569 started
+[Resolution] No match found for "Ore no Kantei Skill ga Cheat Sugite". Incrementing retry count.
+[Resolution] Attempting to resolve series: I Became a Legend a Decade Later After Telling My Comrades to Leave Everything to Me and Retreat First (ID: ddbcc352-e0a5-4d3e-838b-9de7b1184569, Attempt: 2)
+[Resolution] Job resolve-dd375d84-72e1-456b-8266-71c3df4cb91c completed
+[Resolution] Job resolve-deb6210c-7c71-4081-8e77-5eb5e1313b05 started
+[Resolution] Attempting to resolve series: The Comeback of the Demon King (ID: deb6210c-7c71-4081-8e77-5eb5e1313b05, Attempt: 2)
+[Resolution] No match found for "The Comeback of the Demon King". Incrementing retry count.
+[Resolution] No match found for "I Became a Legend a Decade Later After Telling My Comrades to Leave Everything to Me and Retreat First". Incrementing retry count.
+[Resolution] Job resolve-deb6210c-7c71-4081-8e77-5eb5e1313b05 completed
+[Resolution] Job resolve-03f42033-2160-4ad9-b219-f1a565938189 started
+[Resolution] Job resolve-ddbcc352-e0a5-4d3e-838b-9de7b1184569 completed
+[Resolution] Job resolve-6fcc844e-2e8c-4553-a484-fb928e397670 started
+[Resolution] Attempting to resolve series: Shinmai Ossan Bouken-sha, Saikyou paati ni shinu hodo kitae rarete Muteki ni naru (ID: 03f42033-2160-4ad9-b219-f1a565938189, Attempt: 1)
+[Resolution] Attempting to resolve series: The Brilliant Healer's New Life in the Shadows (ID: 6fcc844e-2e8c-4553-a484-fb928e397670, Attempt: 1)
+[Resolution] No match found for "The Brilliant Healer's New Life in the Shadows". Incrementing retry count.
+[Resolution] Job resolve-6fcc844e-2e8c-4553-a484-fb928e397670 completed
+[Resolution] Job resolve-7582fbea-d135-4c16-82c8-49bc400202b7 started
+[Resolution] No match found for "Shinmai Ossan Bouken-sha, Saikyou paati ni shinu hodo kitae rarete Muteki ni naru". Incrementing retry count.
+[Resolution] Job resolve-03f42033-2160-4ad9-b219-f1a565938189 completed
+[Resolution] Job resolve-75be14af-002a-4616-b0b8-e5a30440c47c started
+[Resolution] Attempting to resolve series: Growing Tired of the Lazy High Elf Life After 120 Years (ID: 7582fbea-d135-4c16-82c8-49bc400202b7, Attempt: 1)
+[Resolution] Attempting to resolve series: S-kyuu Guild wo Ridatsu Shita Katanakaji no Jiyuu na Henkyou Slow Life (ID: 75be14af-002a-4616-b0b8-e5a30440c47c, Attempt: 1)
+[Resolution] No match found for "Growing Tired of the Lazy High Elf Life After 120 Years". Incrementing retry count.
+[Resolution] Job resolve-7582fbea-d135-4c16-82c8-49bc400202b7 completed
+[Resolution] Job resolve-7b5a5c96-492f-4cb8-8aeb-bad5695b3134 started
+[Resolution] No match found for "S-kyuu Guild wo Ridatsu Shita Katanakaji no Jiyuu na Henkyou Slow Life". Incrementing retry count.
+[Resolution] Attempting to resolve series: Sekai de Tadahitori no Mamono Tsukai ~Tenshoku Shitara Maou ni Machigawa Remashita~ (ID: 7b5a5c96-492f-4cb8-8aeb-bad5695b3134, Attempt: 1)
+[Resolution] Job resolve-75be14af-002a-4616-b0b8-e5a30440c47c completed
+[Resolution] Job resolve-7c8d3e3d-4483-44e1-9a29-c44f0dd2f1c1 started
+[Resolution] Attempting to resolve series: The Greatest Philosopher With Zero Magic Power. (ID: 7c8d3e3d-4483-44e1-9a29-c44f0dd2f1c1, Attempt: 1)
+[Resolution] No match found for "Sekai de Tadahitori no Mamono Tsukai ~Tenshoku Shitara Maou ni Machigawa Remashita~". Incrementing retry count.
+[Resolution] No match found for "The Greatest Philosopher With Zero Magic Power.". Incrementing retry count.
+[Resolution] Job resolve-7b5a5c96-492f-4cb8-8aeb-bad5695b3134 completed
+[Resolution] Job resolve-7ebd7495-3f13-490f-a896-2ff9cfa571c0 started
+[Resolution] Job resolve-7c8d3e3d-4483-44e1-9a29-c44f0dd2f1c1 completed
+[Resolution] Job resolve-8574bb1d-ca64-46d7-b92e-edb97a8ec561 started
+[Resolution] Attempting to resolve series: Lonely Attack on a Different World (ID: 7ebd7495-3f13-490f-a896-2ff9cfa571c0, Attempt: 1)
+[Resolution] Attempting to resolve series: Yuiitsu Muni No Saikyou Tamer (ID: 8574bb1d-ca64-46d7-b92e-edb97a8ec561, Attempt: 1)
+[Resolution] No match found for "Yuiitsu Muni No Saikyou Tamer". Incrementing retry count.
+[Resolution] No match found for "Lonely Attack on a Different World". Incrementing retry count.
+[Resolution] Job resolve-8574bb1d-ca64-46d7-b92e-edb97a8ec561 completed
+[Resolution] Job resolve-85fc68c8-74fe-4d4d-9c68-b108a66ea457 started
+[Resolution] Job resolve-7ebd7495-3f13-490f-a896-2ff9cfa571c0 completed
+[Resolution] Job resolve-92e30795-2531-4ea5-8694-6a5ccdd79001 started
+[Resolution] Attempting to resolve series: Dorei Shounin shika Sentakushi ga Nai desu yo? Harem? Nani Sore Oishii no? (ID: 85fc68c8-74fe-4d4d-9c68-b108a66ea457, Attempt: 1)
+[Resolution] Attempting to resolve series: The Return of the Corpse King (ID: 92e30795-2531-4ea5-8694-6a5ccdd79001, Attempt: 1)
+[Resolution] No match found for "The Return of the Corpse King". Incrementing retry count.
+[Resolution] Job resolve-92e30795-2531-4ea5-8694-6a5ccdd79001 completed
+[Resolution] Job resolve-9836f672-bfd4-4675-b590-263734623945 started
+[Resolution] No match found for "Dorei Shounin shika Sentakushi ga Nai desu yo? Harem? Nani Sore Oishii no?". Incrementing retry count.
+[Resolution] Job resolve-85fc68c8-74fe-4d4d-9c68-b108a66ea457 completed
+[Resolution] Job resolve-a7db9f55-5af7-48e0-81c7-f624ac50f79a started
+[Resolution] Attempting to resolve series: Monster Eater Adventurer (ID: 9836f672-bfd4-4675-b590-263734623945, Attempt: 1)
+[Resolution] Attempting to resolve series: Copipe de Dungeon Kouryaku! (ID: a7db9f55-5af7-48e0-81c7-f624ac50f79a, Attempt: 1)
+[Resolution] No match found for "Monster Eater Adventurer". Incrementing retry count.
+[Resolution] Job resolve-9836f672-bfd4-4675-b590-263734623945 completed
+[Resolution] Job resolve-b402c6f7-41c3-41c7-b5e4-f6bfbe20bce3 started
+[Resolution] No match found for "Copipe de Dungeon Kouryaku!". Incrementing retry count.
+[Resolution] Attempting to resolve series: When I Put Up The Strongest Barrier In The Country, It Became Too Peaceful And I Was Banished. They Did Know That That Barrier Isn't Permanent, Right? (ID: b402c6f7-41c3-41c7-b5e4-f6bfbe20bce3, Attempt: 1)
+[Resolution] Job resolve-a7db9f55-5af7-48e0-81c7-f624ac50f79a completed
+[Resolution] Job resolve-b53dc484-61a2-4947-8d11-2c3124b362ae started
+[Resolution] Attempting to resolve series: The King of Cave Will Live a Paradise Life (ID: b53dc484-61a2-4947-8d11-2c3124b362ae, Attempt: 1)
+[Resolution] No match found for "The King of Cave Will Live a Paradise Life". Incrementing retry count.
+[Resolution] Job resolve-b53dc484-61a2-4947-8d11-2c3124b362ae completed
+[Resolution] Job resolve-b831fe4a-f0ac-4e7e-9fb1-95aabb2728fd started
+[Resolution] No match found for "When I Put Up The Strongest Barrier In The Country, It Became Too Peaceful And I Was Banished. They Did Know That That Barrier Isn't Permanent, Right?". Incrementing retry count.
+[Resolution] Attempting to resolve series: Rebirth of a Hated Prince With Many Execution Flags (ID: b831fe4a-f0ac-4e7e-9fb1-95aabb2728fd, Attempt: 1)
+[Resolution] Job resolve-b402c6f7-41c3-41c7-b5e4-f6bfbe20bce3 completed
+[Resolution] Job resolve-ba204437-10a0-469a-bd34-f44b665358f4 started
+[Resolution] Attempting to resolve series: The Banished Reincarnated Noble is Free to do as He Pleases (ID: ba204437-10a0-469a-bd34-f44b665358f4, Attempt: 1)
+[Resolution] No match found for "Rebirth of a Hated Prince With Many Execution Flags". Incrementing retry count.
+[Resolution] Job resolve-b831fe4a-f0ac-4e7e-9fb1-95aabb2728fd completed
+[Resolution] Job resolve-c0ccdf4c-3efb-4d94-abb9-8874934623de started
+[Resolution] Attempting to resolve series: Infinite Skill Getter! (ID: c0ccdf4c-3efb-4d94-abb9-8874934623de, Attempt: 1)
+[Resolution] No match found for "The Banished Reincarnated Noble is Free to do as He Pleases". Incrementing retry count.
+[Resolution] Job resolve-ba204437-10a0-469a-bd34-f44b665358f4 completed
+[Resolution] Job resolve-cf199b25-173c-49ba-a252-65b3d4acd311 started
+[Resolution] No match found for "Infinite Skill Getter!". Incrementing retry count.
+[Resolution] Attempting to resolve series: Gendai Chishiki de Isekai o Nariagare! Bishoujo ni Kakoma re Ichaicha Aitemu Seisan (ID: cf199b25-173c-49ba-a252-65b3d4acd311, Attempt: 1)
+[Resolution] Job resolve-c0ccdf4c-3efb-4d94-abb9-8874934623de completed
+[Resolution] Job resolve-d526f4d6-b3be-41d6-9138-9c361db712c1 started
+[Resolution] Attempting to resolve series: I Was Reincarnated as the Villain With Evil Eyes, so I Aim to Be a Mob Character (ID: d526f4d6-b3be-41d6-9138-9c361db712c1, Attempt: 1)
+[Resolution] No match found for "Gendai Chishiki de Isekai o Nariagare! Bishoujo ni Kakoma re Ichaicha Aitemu Seisan". Incrementing retry count.
+[Resolution] Job resolve-cf199b25-173c-49ba-a252-65b3d4acd311 completed
+[Resolution] Job resolve-d56ca76e-cd69-4f11-aa50-b437295b5ba5 started
+[Workers] Heartbeat sent
+[Resolution] No match found for "I Was Reincarnated as the Villain With Evil Eyes, so I Aim to Be a Mob Character". Incrementing retry count.
+[Resolution] Attempting to resolve series: Maou Toshi (ID: d56ca76e-cd69-4f11-aa50-b437295b5ba5, Attempt: 1)
+[Resolution] Job resolve-d526f4d6-b3be-41d6-9138-9c361db712c1 completed
+[Resolution] Job resolve-d7e88b96-c6f0-4b1b-9e73-20f0a3b879d4 started
+[Resolution] Attempting to resolve series: I’m an Isekai Master?! ～About That Time I Got a Skill to Make Anyone [My Personal Maid]～ (ID: d7e88b96-c6f0-4b1b-9e73-20f0a3b879d4, Attempt: 1)
+[Resolution] No match found for "Maou Toshi". Incrementing retry count.
+[Resolution] Job resolve-d56ca76e-cd69-4f11-aa50-b437295b5ba5 completed
+[Resolution] Job resolve-dded5f0c-b53c-45ef-8b5f-fa6788288cfa started
+[Resolution] Attempting to resolve series: Counterattack of the Ugly Orcs (ID: dded5f0c-b53c-45ef-8b5f-fa6788288cfa, Attempt: 1)
+[Resolution] No match found for "I’m an Isekai Master?! ～About That Time I Got a Skill to Make Anyone [My Personal Maid]～". Incrementing retry count.
+[Resolution] Job resolve-d7e88b96-c6f0-4b1b-9e73-20f0a3b879d4 completed
+[Resolution] No match found for "Counterattack of the Ugly Orcs". Incrementing retry count.
+[Resolution] Job resolve-dded5f0c-b53c-45ef-8b5f-fa6788288cfa completed
+[Workers] Heartbeat sent
+[Workers] Heartbeat sent
+[Workers] Heartbeat sent
+[Workers] Heartbeat sent
